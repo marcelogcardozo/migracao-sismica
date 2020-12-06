@@ -7,7 +7,7 @@ To run the script, if you've Windows, just execute the run.bat. If you've Linux,
 
 Add: You'll need the Python and its librarys installed in your computer, they are: math, time, numba, numpy, matplotlib, mpl_toolkits.axes_grid1, scipy.  
 
-The results of process is:  
+The results of process are:  
 
 The modeling:  
 
