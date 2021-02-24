@@ -1,6 +1,6 @@
 # Seismic Modeling and Reverse Time Migration  
 
-This code was made to do the migration of seismic session, but before this, we need to make the the modeling for do the seismogram, that will used to migration.  
+This code was made to do the migration of seismic session, but before this, we need to make the modeling to do the seismogram, that will used to migration.  
 In this case, the model is Marmousi, but you can do the process with any model. You just have to change the dimensions and the parameters in parameters.py archive.  
 
 To run the script, if you've Windows, just execute the run.bat. If you've Linux, execute the run.sh.  
