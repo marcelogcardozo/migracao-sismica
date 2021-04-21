@@ -16,3 +16,6 @@ The modeling:
 The migration:  
 
 ![Laplacian 2](https://user-images.githubusercontent.com/54816858/101295897-12692180-37ff-11eb-8fef-d520823cd33e.png)
+
+
+Próximo passo: Melhorar a qualidade das imagens obtidas.
