@@ -200,6 +200,5 @@ Na migração é feito o processo inverso, portanto, utilizaremos os dados grava
 <img src="https://user-images.githubusercontent.com/54816858/118076655-00307800-b389-11eb-9d18-936abd2d87b2.png" alt="drawing" width="600"/><br>
 
 <h1>Extras</h1>
-<h2>Propagação da Onda - Animação</h2>
-<br>
+<h3>Propagação da Onda - Animação</h3>
 <p>Veja o vídeo da onda acústica sendo propagada no modelo: <a href='https://youtu.be/Rzuye6H1EuQ'> Wave Propagation</a></p>
