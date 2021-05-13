@@ -8,7 +8,7 @@ Pontos no eixo X = 383
 Pontos nas bordas = 50
 Ponto da camada d'água = 30
 
-Variação temporal  = 0.0006
+Variação temporal  = 0.0004
 Variação espacial = 10
 Frequência de corte = 60
 

@@ -1,6 +1,7 @@
 from Parametros import Parametros
 import matplotlib.pyplot as plt
 import numpy as np
+import os.path
 
 
 class Ricker(Parametros):
@@ -26,10 +27,14 @@ class Ricker(Parametros):
 
     def ricker_plot(self):
 
-        fig = plt.figure(figsize=(8,8))
+        pathfile = os.path.abspath(os.path.dirname(__file__))
+        workfile = os.path.join(pathfile, '..', 'output', f'Ricker_Wavelet_{self.fcorte}Hz.png')
+
+        fig = plt.figure(figsize=(8,6))
         eixo = fig.add_axes([0,0,1,1])
         eixo.plot(self.t,-self.fonte)
         eixo.set_title('Ricker Wavelet', fontsize=18)
         eixo.set_xlabel('Tempo (s)', fontsize=15)
         eixo.set_ylabel('Amplitude (Hz)', fontsize=15)
         eixo.grid(True)
+        fig.savefig(workfile, dpi=1000, bbox_inches='tight', transparent=True)

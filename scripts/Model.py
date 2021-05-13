@@ -70,6 +70,9 @@ class Model(Parametros):
 
         return model_camada_de_agua, extended_model
         
+    def normalize(self, P):
+        P[:,:] /= P.min()
+        return P
     
     def model_plot(self, type='original', cmap='cividis'):      
 
@@ -100,20 +103,21 @@ class Model(Parametros):
         plt.rcParams['xtick.top'] = True
         plt.rcParams['xtick.labeltop'] = True
 
-        plt.rc('xtick', labelsize=16)    
-        plt.rc('ytick', labelsize=16)
-        plt.rcParams.update({'font.size':16})
+        plt.rc('xtick', labelsize=12)    
+        plt.rc('ytick', labelsize=12)
+        plt.rcParams.update({'font.size':12})
 
         ## Formatação do plot
-        fig, ax = plt.subplots(figsize=(8,16))
+        fig, ax = plt.subplots(figsize=(10,15))
         ax.xaxis.set_label_position('top')
         im = ax.imshow(modelo, cmap = cmap, extent=[0,xmax,zmax,0], interpolation='bicubic')
         plt.title(nome)
-        plt.xlabel('Distance (m)', fontsize=16)
-        plt.ylabel('Profundidade (m)', fontsize=16)
+        plt.xlabel('Distance (m)', fontsize=12)
+        plt.ylabel('Profundidade (m)', fontsize=12)
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.05)
         plt.colorbar(im, cax=cax)
-        plt.savefig(workfile, dpi=500, bbox_inches='tight')
+        plt.savefig(workfile, dpi=1000, bbox_inches='tight', transparent=True)
+        plt.grid(True)
         plt.show()
         
