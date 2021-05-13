@@ -174,36 +174,32 @@ Na migração é feito o processo inverso, portanto, utilizaremos os dados grava
 <a href="https://www.codecogs.com/eqnedit.php?latex=Im3(x,z)&space;=&space;\frac{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Desc(x,z,t)}{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Asc(x,z,t)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Im3(x,z)&space;=&space;\frac{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Desc(x,z,t)}{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Asc(x,z,t)}" title="Im3(x,z) = \frac{\sum_{t = 0}^{t = ntotal}Asc(x,z,t)Desc(x,z,t)}{\sum_{t = 0}^{t = ntotal}Asc(x,z,t)Asc(x,z,t)}" /></a><br>
 
 
-<br>
-
 <h3>Imagens</h3>
 <br>
 <p> Sabendo disso, tem-se as imagens com e sem filtro: (Modelo com bordas e com camada d'água)</p>
-<br>
+
 <h4> Seção Migrada sem Filtro</h4>
-<br>
-<img src="https://user-images.githubusercontent.com/54816858/118075715-f7d73d80-b386-11eb-89c7-94fc10cf80ea.png" alt="drawing" width="600"/><br><br>
+
+<img src="https://user-images.githubusercontent.com/54816858/118075715-f7d73d80-b386-11eb-89c7-94fc10cf80ea.png" alt="drawing" width="600"/><br>
 
 <h4> Iluminação da Fonte</h4>
-<br>
-<img src="https://user-images.githubusercontent.com/54816858/118076031-a54a5100-b387-11eb-8ace-57b5080f6924.png" alt="drawing" width="600"/><br><br>
+
+<img src="https://user-images.githubusercontent.com/54816858/118076031-a54a5100-b387-11eb-8ace-57b5080f6924.png" alt="drawing" width="600"/><br>
 
 
 <h4> Iluminação dos Receptores</h4>
-<br>
-<img src="https://user-images.githubusercontent.com/54816858/118075710-f6a61080-b386-11eb-9e1a-a72bee4e60e3.png" alt="drawing" width="600"/><br><br>
+
+<img src="https://user-images.githubusercontent.com/54816858/118075710-f6a61080-b386-11eb-9e1a-a72bee4e60e3.png" alt="drawing" width="600"/><br>
 
 <h2>Seção Migrada</h2>
 
 <p>Tendo em vista os resultados anteriores e considerando o modelo migrado com filtro de iluminação dos receptores, pois foi o modelo com melhor qualidade dentre os testados, temos o modelo marmousi migrado:
 
 <h4> Iluminação dos Receptores</h4>
-<br>
-<img src="https://user-images.githubusercontent.com/54816858/118076655-00307800-b389-11eb-9d18-936abd2d87b2.png" alt="drawing" width="600"/><br><br>
 
+<img src="https://user-images.githubusercontent.com/54816858/118076655-00307800-b389-11eb-9d18-936abd2d87b2.png" alt="drawing" width="600"/><br>
 
 <h1>Extras</h1>
-<br>
 <h2>Propagação da Onda - Animação</h2>
 <br>
 <p>Veja o vídeo da onda acústica sendo propagada no modelo: <a href='https://youtu.be/Rzuye6H1EuQ'> Wave Propagation</a></p>
