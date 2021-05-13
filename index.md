@@ -157,7 +157,7 @@ Na migração é feito o processo inverso, portanto, utilizaremos os dados grava
     <li> Fazer o empilhamento da matriz resultante, isto é, auto incrementá-la a cada passo de tempo.</li>
 </ol>
 <br>
-<p> A condição de imagem citada acima é a <strong>Correlação Cruzada</strong> e dela podemos aplicar alguns filtros. Veja: </p><br>
+<p> A condição de imagem citada acima é a <strong>Correlação Cruzada</strong> e dela podemos aplicar alguns filtros.</p><br>
 
 <h2>Imagem</h2>
 
@@ -175,7 +175,6 @@ Na migração é feito o processo inverso, portanto, utilizaremos os dados grava
 
 
 <h3>Imagens</h3>
-<br>
 <p> Sabendo disso, tem-se as imagens com e sem filtro: (Modelo com bordas e com camada d'água)</p>
 
 <h4> Seção Migrada sem Filtro</h4>
@@ -189,7 +188,7 @@ Na migração é feito o processo inverso, portanto, utilizaremos os dados grava
 
 <h4> Iluminação dos Receptores</h4>
 
-<img src="https://user-images.githubusercontent.com/54816858/118075710-f6a61080-b386-11eb-9e1a-a72bee4e60e3.png" alt="drawing" width="600"/><br>
+<img src="https://user-images.githubusercontent.com/54816858/118075710-f6a61080-b386-11eb-9e1a-a72bee4e60e3.png" alt="drawing" width="600"/><br><br>
 
 <h2>Seção Migrada</h2>
 
