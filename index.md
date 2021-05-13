@@ -139,3 +139,71 @@ Aproximação de 4ª ordem para derivadas espaciais e de 2ª ordem para derivada
 <br>
 
 <img src="https://user-images.githubusercontent.com/54816858/117525318-00e79980-af98-11eb-8c51-6ba407c7790e.png" alt="drawing" width="600"/>
+<br>
+<br>
+<h1> Migração Reversa no Tempo </h1>
+
+<p> A migração é o processo inverso ao feito anteriormente.<br> 
+No processo anterior, foi utilizado um algorítmo para simular uma fonte real e o resultado foi gravado a cada passo de tempo na matriz do sismograma.<br>
+Na migração é feito o processo inverso, portanto, utilizaremos os dados gravados no sismograma como fonte. Sendo assim, cada linha do sismograma será uma fonte em cada passo de tempo, então, teremos <i>ntotal</i> fontes para <i>ntotal</i> passos de tempo. Veja o diagrama: </p>
+<br>
+<img src="https://user-images.githubusercontent.com/54816858/118067245-8ee7c980-b376-11eb-9257-01e7567db0c3.png" alt="drawing" width="600"/><br><br>
+<img src="https://user-images.githubusercontent.com/54816858/118067253-9018f680-b376-11eb-9d66-68a14d41c53a.png" alt="drawing" width="600"/><br><br>
+
+<p>Sabendo disso, o que será feito: </p>
+<ol>
+    <li> Propagação do campo de onda da fonte (de 0 até <i>ntotal</i>) pelo modelo, salvando a matriz do campo de pressão em cada passo de tempo em uma matriz 3D.</li>
+    <li> Propagação do campo de onda reverso (utilizando sismograma como fonte, de <i>ntotal</i> até 0), multiplicando cada matriz do campo de pressão pela sua equivalente (mesmo passo de tempo) do campo de onda da fonte.</li>
+    <li> Fazer o empilhamento da matriz resultante, isto é, auto incrementá-la a cada passo de tempo.</li>
+</ol>
+<br>
+<p> A condição de imagem citada acima é a <strong>Correlação Cruzada</strong> e dela podemos aplicar alguns filtros. Veja: </p><br>
+
+<h2>Imagem</h2>
+
+<p>Cálculo mensionado anteriormente: </p>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Im(x,z)&space;=&space;\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Desc(x,z,t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Im(x,z)&space;=&space;\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Desc(x,z,t)" title="Im(x,z) = \sum_{t = 0}^{t = ntotal}Asc(x,z,t)Desc(x,z,t)" /></a><br>
+
+<p>Filtro para eliminar artefatos de meios geológicos de alta complexidade: (iluminação da fonte)</p>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Im2(x,z)&space;=&space;\frac{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Desc(x,z,t)}{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Desc(x,z,t)Desc(x,z,t)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Im2(x,z)&space;=&space;\frac{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Desc(x,z,t)}{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Desc(x,z,t)Desc(x,z,t)}" title="Im2(x,z) = \frac{\sum_{t = 0}^{t = ntotal}Asc(x,z,t)Desc(x,z,t)}{\sum_{t = 0}^{t = ntotal}Desc(x,z,t)Desc(x,z,t)}" /></a><br>
+
+<p>Filtro para eliminar artefatos de meios geológicos de alta complexidade: (iluminação do receptor)</p>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Im3(x,z)&space;=&space;\frac{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Desc(x,z,t)}{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Asc(x,z,t)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Im3(x,z)&space;=&space;\frac{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Desc(x,z,t)}{\sum_{t&space;=&space;0}^{t&space;=&space;ntotal}Asc(x,z,t)Asc(x,z,t)}" title="Im3(x,z) = \frac{\sum_{t = 0}^{t = ntotal}Asc(x,z,t)Desc(x,z,t)}{\sum_{t = 0}^{t = ntotal}Asc(x,z,t)Asc(x,z,t)}" /></a><br>
+
+
+<br>
+
+<h3>Imagens</h3>
+<br>
+<p> Sabendo disso, tem-se as imagens com e sem filtro: (Modelo com bordas e com camada d'água)</p>
+<br>
+<h4> Seção Migrada sem Filtro</h4>
+<br>
+<img src="https://user-images.githubusercontent.com/54816858/118075715-f7d73d80-b386-11eb-89c7-94fc10cf80ea.png" alt="drawing" width="600"/><br><br>
+
+<h4> Iluminação da Fonte</h4>
+<br>
+<img src="https://user-images.githubusercontent.com/54816858/118076031-a54a5100-b387-11eb-8ace-57b5080f6924.png" alt="drawing" width="600"/><br><br>
+
+
+<h4> Iluminação dos Receptores</h4>
+<br>
+<img src="https://user-images.githubusercontent.com/54816858/118075710-f6a61080-b386-11eb-9e1a-a72bee4e60e3.png" alt="drawing" width="600"/><br><br>
+
+<h2>Seção Migrada</h2>
+
+<p>Tendo em vista os resultados anteriores e considerando o modelo migrado com filtro de iluminação dos receptores, pois foi o modelo com melhor qualidade dentre os testados, temos o modelo marmousi migrado:
+
+<h4> Iluminação dos Receptores</h4>
+<br>
+<img src="https://user-images.githubusercontent.com/54816858/118076655-00307800-b389-11eb-9d18-936abd2d87b2.png" alt="drawing" width="600"/><br><br>
+
+
+<h1>Extras</h1>
+<br>
+<h2>Propagação da Onda - Animação</h2>
+<br>
+<p>Veja o vídeo da onda acústica sendo propagada no modelo: <a href='https://youtu.be/Rzuye6H1EuQ'> Wave Propagation</a></p>
