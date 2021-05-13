@@ -139,6 +139,3 @@ Aproximação de 4ª ordem para derivadas espaciais e de 2ª ordem para derivada
 <br>
 
 <img src="https://user-images.githubusercontent.com/54816858/117525318-00e79980-af98-11eb-8c51-6ba407c7790e.png" alt="drawing" width="600"/>
-=======
-
->>>>>>> 2d68d6115aa5d1877e352745a0bba55a649d8967
