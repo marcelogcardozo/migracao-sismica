@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1> Modelagem Sísmica </h1>
 
 <h2> Objetivo </h2>
