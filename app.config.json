@@ -1,0 +1,26 @@
+{
+  "model": {
+    "nome": "Marmousi",
+    "arquivo_binario": "marmousi_vp_383x121.bin",
+    "suavizar_modelo": true
+  },
+  "grid": {
+    "Nz": 121,
+    "Nx": 383,
+    "Na": 50,
+    "Wl": 30
+  },
+  "parameters": {
+    "dx": 10,
+    "dt": 0.0004,
+    "fat": 0.0025,
+    "ntotal": 6000
+  },
+  "fonte": {
+    "fcorte": 60,
+    "shot_z": 5,
+    "shot_x": 192,
+    "rec_shotz": 5
+  },
+  "remover_onda_direta": false
+}

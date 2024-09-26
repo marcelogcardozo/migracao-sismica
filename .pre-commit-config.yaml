@@ -1,0 +1,38 @@
+repos:
+  - repo: https://github.com/ambv/black
+    rev: 24.3.0
+    hooks:
+      - id: black
+        language_version: python3.11.7
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        name: isort (python)
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-ast
+      - id: name-tests-test
+        args: [--pytest-test-first]
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: debug-statements
+      - id: detect-private-key
+      - id: detect-aws-credentials
+        args: [--allow-missing-credentials]
+      - id: trailing-whitespace
+        files: \.(py)$
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.5
+    hooks:
+      - id: remove-tabs
+        args: [--whitespaces-count, "4"]
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        additional_dependencies: [Flake8-pyproject]
